@@ -25,7 +25,8 @@ func main() {
 
 	// Routes
 	routes.Setup(app) 			// Setup Route - serveHome
-	routes.UserRoutes(app)		// Users Route - Register, Login
+	routes.UserRoutes(app)		// Users Route - Register, Login, GetUserInfo
+	routes.PostRoutes(app)		// Posts Route - CreatePost
 
 	// Fetch port from .env file, Listen to port
 	port := os.Getenv("PORT")
