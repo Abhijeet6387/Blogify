@@ -1,0 +1,25 @@
+.container {
+  background-image: url("../images/commonbg.jpg");
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.image-upload-container {
+  display: block;
+}
+
+.uploadImage {
+  width: 375px;
+  height: auto;
+  margin: 20px 10px 10px 10px;
+  border: 2px solid black;
+}

@@ -1,0 +1,40 @@
+.blog-detail-container {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/commonbg.jpg");
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.blog-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid black;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.blog-description {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 20px 20px 20px 20px;
+}

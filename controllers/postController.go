@@ -72,7 +72,7 @@ func CreatePost(c *fiber.Ctx) error {
 
 func GetAllPosts(c *fiber.Ctx) error {
 	page, _ := strconv.Atoi(c.Query("page", "1"))
-	limit := 5
+	limit := 4
 	offset := (page-1)*limit
 	var total int64
 	var getblogs []models.Blog
@@ -91,6 +91,18 @@ func GetAllPosts(c *fiber.Ctx) error {
 		},
 	})
 }
+
+// func GetAllPosts(c *fiber.Ctx) error {
+// 	var getblogs []models.Blog
+
+// 	database.DB.Preload("User").Find(&getblogs)
+	
+// 	c.Status(fiber.StatusAccepted)
+// 	return c.JSON(fiber.Map{
+// 		"message": "Fetched all the posts",
+// 		"data":    getblogs,
+// 	})
+// }
 
 func UniquePost(c *fiber.Ctx) error {
 	cookie := c.Cookies("jwt-token")

@@ -7,6 +7,7 @@ import (
 	"github.com/Abhijeet6387/blogappbackend/database"
 	"github.com/Abhijeet6387/blogappbackend/routes"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/joho/godotenv"
 )
 
@@ -22,6 +23,11 @@ func main() {
 
 	// Create a new Fiber Instance
 	app := fiber.New()
+
+	app.Use(cors.New(cors.Config{
+        AllowOrigins: "http://localhost:3000",
+        AllowCredentials: true, // Enable credentials support
+    }))
 
 	// Routes
 	routes.Setup(app) 			// Setup Route - serveHome
